@@ -6,14 +6,14 @@ from SWTS_Learner import *
 
 
 n_arms = 4
-p = np.array([[0.15, 0.1 ,0.2 ,0.35], [0.35, 0.21, 0.2, 0.35], [0.5, 0.1, 0.1, 0.15], [0.8, 0.21, 0.1, 0.15]])
+p = np.array([[0.15, 0.1 ,0.2 ,0.35], [0.45, 0.21, 0.2, 0.35], [0.1, 0.1, 0.5, 0.15], [0.1, 0.21, 0.1, 0.15]])
 # p is a matrix (n_arms, n_phases)
 T = 500
 
 n_experiments = 100
 ts_rewards_per_experiment = []
 swts_rewards_per_experiment = []
-window_size = 2*int(np.sqrt(T))
+window_size = 4*int(np.sqrt(T))
 
 for e in range(0, n_experiments):
     ts_env = Non_Stationary_Environment(n_arms, probabilities=p, horizon= T)
