@@ -8,7 +8,7 @@ from SWTS_Learner import *
 n_arms = 4
 p = np.array([[0.15, 0.1 ,0.2 ,0.35], [0.35, 0.21, 0.2, 0.35], [0.5, 0.1, 0.1, 0.15], [0.8, 0.21, 0.1, 0.15]])
 # p is a matrix (n_arms, n_phases)
-T = 400
+T = 500
 
 n_experiments = 100
 ts_rewards_per_experiment = []
@@ -37,7 +37,7 @@ for e in range(0, n_experiments):
 ts_instantaneus_regret = np.zeros(T)
 swts_instantaneus_regret = np.zeros(T)
 n_phases = len(p)
-phases_len = T/n_phases
+phases_len = int(T/n_phases)
 opt_per_phases = p.max(axis=1)
 optimum_per_round = np.zeros(T)
 

@@ -6,13 +6,13 @@ from Greedy_Learner import *
 
 
 
-p = np.array([0.15, 0.1, 0.1, 0.2, 0.35, 0.2])
+p = np.array([0.15, 0.1, 0.1, 0.35])
 n_arms = len(p)
 opt = np.max(p)
 
-T = 200
+T = 300
 
-n_experiments=500
+n_experiments=1000
 ts_rewards_per_experiment = []
 gr_rewards_per_experiment = []
 
